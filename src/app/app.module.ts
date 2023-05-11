@@ -3,14 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AppelAPIComponent } from './composants/appel-api/appel-api.component';
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
+import { UnCocktailComponent } from './composants/un-cocktail/un-cocktail.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppelAPIComponent,
+    UnCocktailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

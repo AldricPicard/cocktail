@@ -1,0 +1,9 @@
+
+<div class="uncocktail">
+  <div class="" *ngIf="unCocktail$ | async as resultAPI">
+    <div class="" *ngFor="let result of resultAPI.drinks">
+      <p>{{ result.strDrink}}</p>
+      <a routerLink="/uncocktail/{{result.idDrink}}"><img [src]="result.strDrinkThumb" alt=""></a>
+    </div>
+  </div>
+</div>

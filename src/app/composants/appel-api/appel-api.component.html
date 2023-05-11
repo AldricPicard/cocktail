@@ -1,0 +1,17 @@
+<form #formulaireRechercheCocktail="ngForm">
+  <input type="text" name="recherchedrink" id="recherchedrink" ngModel>
+  <button (click)="RechercheCocktail(formulaireRechercheCocktail.value.recherchedrink)">Recherche un cocktail</button>
+ </form>
+<form #formsearching="ngForm">
+  <input type="text" name="rechercheingredient" id="rechercheingredient" ngModel>
+  <button (click)="rechercheingredient(formsearching.value.rechercheingredient)">Recherche par ingredient</button>
+</form>
+
+<div class="componentApi">
+  <div class="" *ngIf="appelAPI$ | async as resultAPI">
+    <div class="" *ngFor="let result of resultAPI.drinks">
+      <p>{{ result.strDrink}}</p>
+      <a routerLink="/uncocktail/{{result.idDrink}}"><img [src]="result.strDrinkThumb" alt=""></a>
+    </div>
+  </div>
+</div>
