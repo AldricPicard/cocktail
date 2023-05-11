@@ -17,7 +17,7 @@ export class UnCocktailComponent implements OnInit{
     @Inject(ActivatedRoute) private route:ActivatedRoute
   )
   {
-    this.id = +this.route.snapshot.paramMap.get('idDrink')!;
+    this.id = +this.route.snapshot.paramMap.get('id')!;
     console.log(this.id);
 
   }
